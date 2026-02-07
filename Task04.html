@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Spinning Logo</title>
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    perspective: 800px;
+}
+
+.text-logo {
+    font-size: 60px;
+    font-weight: bold;
+    color: #ff5722;
+    transform-style: preserve-3d;
+    animation: rotateLogo 3s linear infinite;
+}
+
+@keyframes rotateLogo {
+    from { transform: rotateY(0deg); }
+    to   { transform: rotateY(360deg); }
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="text-logo">LOGO</div>
+</div>
+</body>
+</html>

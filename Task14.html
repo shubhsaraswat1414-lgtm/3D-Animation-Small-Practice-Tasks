@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Car Animation</title>
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: #ffffff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.car {
+    position: absolute;
+    left: -150px;
+    width: 120px;
+    animation: drive 5s linear infinite;
+}
+
+.carBody {
+    width: 120px;
+    height: 30px;
+    background: #ff5722;
+    border-radius: 5px;
+    position: relative;
+}
+
+.wheel {
+    width: 20px;
+    height: 20px;
+    background: #333333;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10px;
+}
+
+.wheel.left { left: 10px; }
+.wheel.right { right: 10px; }
+
+@keyframes drive {
+    to { left: 100%; }
+}
+</style>
+</head>
+<body>
+
+<div class="car">
+    <div class="carBody">
+        <div class="wheel left"></div>
+        <div class="wheel right"></div>
+    </div>
+</div>
+
+</body>
+</html>

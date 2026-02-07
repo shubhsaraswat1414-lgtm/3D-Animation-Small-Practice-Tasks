@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bouncing Cube</title>
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.floor {
+    position: absolute;
+    bottom: 100px;
+    width: 300px;
+    height: 6px;
+    background: #555555;
+}
+
+.block {
+    width: 60px;
+    height: 60px;
+    background: #ff5722;
+    position: absolute;
+    bottom: 100px;
+    animation: jump 1s infinite;
+}
+
+@keyframes jump {
+    0%   { transform: translateY(0) scale(1,1); }
+    50%  { transform: translateY(-200px) scale(1,1); }
+    100% { transform: translateY(0) scale(1.2,0.8); }
+}
+</style>
+</head>
+<body>
+<div class="block"></div>
+<div class="floor"></div>
+</body>
+</html>

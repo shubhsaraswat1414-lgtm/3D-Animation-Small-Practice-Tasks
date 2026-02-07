@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Jumping Sphere Animation</title>
+
+<style>
+html, body {
+    margin: 0;
+    height: 100%;
+    background-color: #fefefe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.platform {
+    position: absolute;
+    bottom: 120px;
+    width: 320px;
+    height: 8px;
+    background-color: #222;
+    border-radius: 4px;
+}
+
+.sphere {
+    width: 60px;
+    height: 60px;
+    background-color: #ff4444;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 120px;
+    animation: jumpAnim 1s ease-in-out infinite;
+}
+
+@keyframes jumpAnim {
+    0% {
+        transform: translateY(0) scale(1, 1);
+    }
+    40% {
+        transform: translateY(-180px) scale(1, 1);
+    }
+    60% {
+        transform: translateY(-180px) scale(1, 1);
+    }
+    100% {
+        transform: translateY(0) scale(1.2, 0.8);
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="sphere"></div>
+<div class="platform"></div>
+</body>
+</html>
